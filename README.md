@@ -124,8 +124,9 @@ mkdir ${BASEDIR}/containers
 singularity build ${BASEDIR}/containers/fmriprep-20.2.7.simg \
                     docker://nipreps/fmriprep:20.2.7
                     
-                    the above step is downloading ALL the fmriprep software and putting it in a 'tupperware' container (according to Erin).
+                    
 ```
+The above step is downloading ALL the fmriprep software and putting it in a 'tupperware' container (according to Erin).
 
 Testing and setting up for the singularity run..
 
