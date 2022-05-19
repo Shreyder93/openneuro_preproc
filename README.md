@@ -58,7 +58,7 @@ ${BASEDIR}
 ├── code
 │   └── openneuro_preproc        # a clone of this repo
 ├── containers
-│   └── fmriprep-20.2.7.simg     # the singularity image used to run fmriprep
+│   └── fmriprep-20.2.7.simg     # the singularity image used to run fmriprep (need to run steps below to get this first!)
 ├── ${OPENNEURO_DSID}            # folder for the dataset
 │   ├── bids                     # the bids data is the data downloaded from openneuro
 │   ├── derived                  # holds derivatives derived from the bids data
@@ -118,7 +118,7 @@ This step was run by Erin
 
 
 ```sh
-module load singularity/3.8.0
+module load singularity/3.8.0 (not necessary ot module load but run other steps); (gets recipe to do 'science' from docker)
 # singularity build /my_images/fmriprep-<version>.simg docker://nipreps/fmriprep:<version>
 mkdir ${BASEDIR}/containers
 singularity build ${BASEDIR}/containers/fmriprep-20.2.7.simg \
@@ -127,7 +127,7 @@ singularity build ${BASEDIR}/containers/fmriprep-20.2.7.simg \
 
 Testing and setting up for the singularity run..
 
-we need a copy of the freesurfer license to be in:
+We need a copy of the freesurfer license to be in: you can get htis from the freesrufer webiste or within the SCC (our option)
 
 ```sh
 ls ${BASEDIR}/fmriprep_home/.freesurfer.txt
