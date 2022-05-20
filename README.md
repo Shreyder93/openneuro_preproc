@@ -118,7 +118,7 @@ This step was run by Erin
 
 
 ```sh
-module load singularity/3.8.0 (not necessary ot module load but run other steps); (gets recipe to do 'science' from docker)
+module load tools/singularity/3.8.5 #(not necessary ot module load but run other steps); (gets recipe to do 'science' from docker)
 # singularity build /my_images/fmriprep-<version>.simg docker://nipreps/fmriprep:<version>
 mkdir ${BASEDIR}/containers
 singularity build ${BASEDIR}/containers/fmriprep-20.2.7.simg \
